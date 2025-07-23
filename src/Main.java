@@ -13,9 +13,7 @@ public class Main {
         student3.displayDetails(); // Expected: 100 (default, as 180 is invalid)
 
         // Display class statistics
-        HealthRecord.displayClassDetails(); // Expected: tallest=120, shortest=55
+        HealthRecord.displayClassDetails(); // Expected: tallest=120, shortest=55, avg=91.67
 
-        //test avg
-        System.out.println(HealthRecord.getAverageHeight());
     }
 }

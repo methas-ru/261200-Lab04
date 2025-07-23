@@ -85,5 +85,6 @@ public class HealthRecord {
     public static void displayClassDetails() {
         System.out.println("The tallest height (cm): " + getTallestHeight());
         System.out.println("The shortest height (cm): " + getShortestHeight());
+        System.out.println("The average height (cm): " + getAverageHeight());
     }
 }
