@@ -52,7 +52,8 @@ public class HealthRecord {
         // TODO: Validate height is within permitted range
         if (height < MAX_PERMITTED_HEIGHT  && height > MIN_PERMITTED_HEIGHT) {
             this.height = height;
-        } else {
+        }
+        else {
             this.height = DEFAULT_HEIGHT;
         }
 
@@ -63,6 +64,11 @@ public class HealthRecord {
         if (this.height < shortestHeight) {
             shortestHeight = this.height;
         }
+
+        // Update average using: y' = (y*n + x)/(n+1)
+        averageHeight = (averageHeight*counter + height)/(counter+1)
+        counter++;
+
     }
 
     /*****************************************************
