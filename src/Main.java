@@ -2,14 +2,17 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create and test student records
+        HealthRecord student1 = new HealthRecord(120);
+        HealthRecord student2 = new HealthRecord(55);
+        HealthRecord student3 = new HealthRecord(180);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Display individual records
+        student1.displayDetails(); // Expected: 120
+        student2.displayDetails(); // Expected: 55
+        student3.displayDetails(); // Expected: 100 (default, as 180 is invalid)
+
+        // Display class statistics
+        HealthRecord.displayClassDetails(); // Expected: tallest=120, shortest=55
     }
 }
