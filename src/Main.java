@@ -14,5 +14,8 @@ public class Main {
 
         // Display class statistics
         HealthRecord.displayClassDetails(); // Expected: tallest=120, shortest=55
+
+        //test avg
+        System.out.println(HealthRecord.getAverageHeight());
     }
 }

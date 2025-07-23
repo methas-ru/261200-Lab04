@@ -43,6 +43,10 @@ public class HealthRecord {
         return shortestHeight;
     }
 
+    public static double getAverageHeight() {
+        return averageHeight;
+    }
+
     /*****************************************************
      *********************** Setter ***********************
      ******************************************************/
@@ -66,8 +70,7 @@ public class HealthRecord {
         }
 
         // Update average using: y' = (y*n + x)/(n+1)
-        averageHeight = (averageHeight*counter + height)/(counter+1)
-        counter++;
+        averageHeight = (averageHeight*counter + this.height)/(++counter);
 
     }
 
