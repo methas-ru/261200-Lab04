@@ -17,13 +17,14 @@ public class HealthRecord {
     private static int tallestHeight = MIN_PERMITTED_HEIGHT;
     private static int shortestHeight = MAX_PERMITTED_HEIGHT;
     private static int counter = 0;      // count number of objects
-    private static double averageHeight; // track average height
+    private static double averageHeight = 0; // track average height
 
     /*****************************************************
      ******************** Constructor *********************
      ******************************************************/
 
     public HealthRecord(int height) {
+        counter++;
         setHeight(height);
     }
 
@@ -70,7 +71,7 @@ public class HealthRecord {
         }
 
         // Update average using: y' = (y*n + x)/(n+1)
-        averageHeight = (averageHeight*counter + this.height)/(++counter);
+        averageHeight = (averageHeight*(counter-1) + this.height)/(counter);
 
     }
 
